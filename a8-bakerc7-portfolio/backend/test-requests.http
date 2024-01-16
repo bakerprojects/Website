@@ -1,0 +1,82 @@
+### CREATE five documents.
+POST http://localhost:3000/cities HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Tokyo",
+    "dateAdded": "06-23-19",
+    "priorityLevel": 5
+}
+
+
+### CREATE 2
+POST http://localhost:3000/cities HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Prague",
+    "dateAdded": "10-09-19",
+    "priorityLevel": 4
+}
+
+### CREATE 3
+POST http://localhost:3000/cities HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Los Angeles",
+    "dateAdded": "09-18-22",
+    "priorityLevel": 2
+}
+
+### CREATE 4
+POST http://localhost:3000/cities HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Seoul",
+    "dateAdded": "04-26-16",
+    "priorityLevel": 5
+}
+
+### CREATE 5
+POST http://localhost:3000/cities HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Paris",
+    "dateAdded": "02-08-23",
+    "priorityLevel": 3
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/cities HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/cities/656cbf46b9e0c25edec873a7 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/cities/656cbf46b9e0c25edec873a7 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Paris",
+    "dateAdded": "05-12-20",
+    "priorityLevel": 5
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/cities/656cc13993b2a50a98ff51e5 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/cities HTTP/1.1
+
